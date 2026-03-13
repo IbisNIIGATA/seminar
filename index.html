@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>知らないと損する！新潟県高校受験セミナー｜SCアカデミー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Shippori+Mincho:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #100f0c;
+  --ivory: #f8f5ef;
+  --cream: #eee9df;
+  --gold: #b8892a;
+  --gold-lt: #d4a84a;
+  --gold-pale: #f5e8c4;
+  --red: #9b2020;
+  --red-lt: #c0392b;
+  --slate: #3c3830;
+  --mid: #6e6760;
+  --border: rgba(184,137,42,0.28);
+  --shadow: 0 4px 32px rgba(0,0,0,.10);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:var(--ivory);
+  color:var(--ink);
+  overflow-x:hidden;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   UTILITY
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.container{max-width:860px;margin:0 auto;padding:0 24px;}
+.gold-line{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 auto;}
+.red-tag{
+  display:inline-block;
+  background:var(--red);
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.12em;
+  padding:3px 10px;
+  border-radius:2px;
+}
+.section-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--gold);
+  text-transform:uppercase;
+  display:block;
+  margin-bottom:10px;
+}
+.serif{font-family:'Shippori Mincho',serif;}
+
+/* scroll reveal */
+.reveal{
+  opacity:0;
+  transform:translateY(24px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-delay-1{transition-delay:.1s;}
+.reveal-delay-2{transition-delay:.2s;}
+.reveal-delay-3{transition-delay:.3s;}
+.reveal-delay-4{transition-delay:.4s;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   STICKY NAV
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.sticky-nav{
+  position:fixed;
+  top:0; left:0; right:0;
+  z-index:999;
+  background:rgba(16,15,12,.93);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(10px);
+  transition:transform .3s ease;
+}
+.sticky-nav-inner{
+  max-width:860px;
+  margin:0 auto;
+  padding:10px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.nav-brand{
+  font-family:'Shippori Mincho',serif;
+  font-size:13px;
+  color:var(--gold-lt);
+  letter-spacing:.1em;
+}
+.nav-cta{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:var(--gold);
+  color:var(--ink);
+  font-size:12px;
+  font-weight:700;
+  padding:8px 18px;
+  border-radius:2px;
+  text-decoration:none;
+  letter-spacing:.08em;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--gold-lt);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   HERO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.hero{
+  background:var(--ink);
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  padding:100px 0 80px;
+  border-top:4px solid var(--gold);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(184,137,42,.05) 59px,rgba(184,137,42,.05) 60px),
+    repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(184,137,42,.05) 59px,rgba(184,137,42,.05) 60px);
+}
+.hero-left-bar{
+  display:none;
+}
+.hero-watermark{
+  position:absolute;
+  right:50%;
+  transform:translateX(50%) translateY(-50%);
+  top:50%;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(80px,14vw,180px);
+  color:rgba(184,137,42,.04);
+  writing-mode:vertical-rl;
+  letter-spacing:.08em;
+  pointer-events:none;
+  line-height:1;
+  font-style:italic;
+}
+.hero-inner{
+  position:relative;
+  z-index:1;
+  padding:0 48px;
+  max-width:860px;
+  margin:0 auto;
+  width:100%;
+  text-align:center;
+}
+.hero-eyebrow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  margin-bottom:28px;
+}
+.hero-eyebrow .line{
+  width:40px;height:1px;background:var(--gold);
+}
+.hero-eyebrow span{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;
+  letter-spacing:.35em;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+.hero-kv{
+  margin-bottom:20px;
+}
+.hero-kv .catch{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(13px,2vw,18px);
+  color:var(--mid);
+  letter-spacing:.08em;
+  margin-bottom:14px;
+  line-height:1.6;
+}
+.hero-kv .catch em{
+  font-style:normal;
+  color:var(--gold-lt);
+}
+.hero-title{
+  font-family:'Shippori Mincho',serif;
+  font-weight:800;
+  font-size:clamp(26px,5.5vw,58px);
+  color:var(--ivory);
+  line-height:1.35;
+  letter-spacing:-.01em;
+  margin-bottom:8px;
+}
+.hero-title em{
+  font-style:normal;
+  color:var(--gold-lt);
+}
+.hero-sub{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(14px,2.4vw,22px);
+  color:rgba(248,245,239,.55);
+  font-weight:400;
+  letter-spacing:.04em;
+  margin-bottom:36px;
+  line-height:1.6;
+}
+.hero-info-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  margin-bottom:36px;
+  justify-content:center;
+}
+.info-chip{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:13px;
+  color:var(--ivory);
+}
+.info-chip .dot{
+  width:6px;height:6px;
+  background:var(--gold);
+  border-radius:50%;
+  flex-shrink:0;
+}
+.hero-cta-group{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  align-items:center;
+  justify-content:center;
+}
+.btn-primary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--gold);
+  color:var(--ink);
+  font-weight:700;
+  font-size:15px;
+  padding:16px 32px;
+  border-radius:2px;
+  text-decoration:none;
+  letter-spacing:.06em;
+  transition:background .2s, transform .15s;
+}
+.btn-primary:hover{background:var(--gold-lt);transform:translateY(-1px);}
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  border:1px solid var(--border);
+  color:var(--gold-lt);
+  font-size:14px;
+  padding:15px 28px;
+  border-radius:2px;
+  text-decoration:none;
+  letter-spacing:.06em;
+  transition:border-color .2s, background .2s;
+}
+.btn-secondary:hover{border-color:var(--gold);background:rgba(184,137,42,.08);}
+.hero-note{
+  margin-top:16px;
+  font-size:11px;
+  color:var(--mid);
+  letter-spacing:.06em;
+  text-align:center;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   PAIN SECTION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.pain-section{
+  background:var(--cream);
+  padding:88px 0;
+  position:relative;
+}
+.pain-section::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:4px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.section-head{
+  text-align:center;
+  margin-bottom:56px;
+}
+.section-head h2{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(22px,4vw,36px);
+  font-weight:700;
+  line-height:1.5;
+  margin-bottom:14px;
+}
+.section-head p{
+  font-size:14px;
+  color:var(--mid);
+  line-height:1.9;
+}
+.pain-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+}
+.pain-card{
+  background:white;
+  border-left:3px solid var(--red);
+  padding:22px 24px;
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  box-shadow:var(--shadow);
+}
+.pain-card .icon{
+  font-size:22px;
+  flex-shrink:0;
+  margin-top:2px;
+}
+.pain-card p{
+  font-size:13.5px;
+  line-height:1.75;
+  color:var(--slate);
+}
+.pain-card strong{color:var(--red);}
+.pain-bridge{
+  margin-top:48px;
+  text-align:center;
+  padding:28px 32px;
+  border:1px solid var(--border);
+  background:linear-gradient(135deg,rgba(184,137,42,.06),rgba(184,137,42,.02));
+  border-radius:2px;
+}
+.pain-bridge p{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(15px,2.5vw,20px);
+  line-height:1.7;
+  color:var(--ink);
+}
+.pain-bridge em{font-style:normal;color:var(--gold);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   SEMINAR DETAIL
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.detail-section{
+  background:var(--ink);
+  padding:88px 0;
+  position:relative;
+  overflow:hidden;
+}
+.detail-section .bg-grid{
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(184,137,42,.04) 39px,rgba(184,137,42,.04) 40px),
+    repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(184,137,42,.04) 39px,rgba(184,137,42,.04) 40px);
+}
+.detail-section .container{position:relative;z-index:1;}
+.detail-section .section-head h2{color:var(--ivory);}
+.detail-section .section-head p{color:var(--mid);}
+.detail-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:2px;
+  margin-bottom:48px;
+}
+.detail-card{
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--border);
+  padding:32px 28px;
+}
+.detail-card .dc-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--gold);
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.detail-card .dc-main{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(16px,2.5vw,22px);
+  color:var(--ivory);
+  font-weight:600;
+  line-height:1.5;
+  margin-bottom:8px;
+}
+.detail-card .dc-sub{
+  font-size:12px;
+  color:var(--mid);
+  line-height:1.7;
+}
+.agenda-title{
+  font-family:'Shippori Mincho',serif;
+  font-size:18px;
+  color:var(--gold-lt);
+  margin-bottom:24px;
+  font-weight:600;
+  letter-spacing:.05em;
+}
+.agenda-list{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:10px;
+}
+.agenda-list li{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  font-size:13.5px;
+  color:rgba(248,245,239,.75);
+  line-height:1.7;
+  padding:12px 16px;
+  border:1px solid rgba(184,137,42,.12);
+  background:rgba(184,137,42,.04);
+}
+.agenda-list li .num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;
+  color:var(--gold);
+  flex-shrink:0;
+  line-height:1.2;
+  font-weight:600;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   GRADE TARGETS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.grade-section{
+  padding:88px 0;
+  background:white;
+}
+.grade-cols{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:0;
+  border:1px solid var(--cream);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.grade-col{
+  padding:36px 28px;
+  border-right:1px solid var(--cream);
+}
+.grade-col:last-child{border-right:none;}
+.grade-col-head{
+  margin-bottom:24px;
+}
+.grade-tag{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--ink);
+  font-size:11px;
+  font-weight:700;
+  padding:4px 12px;
+  letter-spacing:.1em;
+  margin-bottom:12px;
+}
+.grade-col-head h3{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(15px,2vw,19px);
+  font-weight:700;
+  line-height:1.5;
+}
+.grade-actions{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.grade-actions li{
+  display:flex;
+  gap:10px;
+  font-size:13px;
+  color:var(--slate);
+  line-height:1.65;
+}
+.grade-actions li::before{
+  content:'—';
+  color:var(--gold);
+  flex-shrink:0;
+  font-weight:700;
+}
+.grade-bottom{
+  margin-top:40px;
+  padding:24px 32px;
+  background:var(--cream);
+  border-left:4px solid var(--gold);
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(14px,2vw,17px);
+  line-height:1.75;
+  color:var(--ink);
+}
+.grade-bottom em{font-style:normal;color:var(--gold);}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   BENEFITS (特典)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.benefit-section{
+  background:var(--cream);
+  padding:88px 0;
+}
+.benefit-cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+}
+.benefit-card{
+  background:white;
+  border-top:3px solid var(--gold);
+  padding:32px 28px;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.benefit-card .bnum{
+  font-family:'Cormorant Garamond',serif;
+  font-size:48px;
+  color:rgba(184,137,42,.12);
+  position:absolute;
+  top:16px;right:20px;
+  line-height:1;
+  font-weight:700;
+}
+.benefit-card .bicon{
+  font-size:28px;
+  margin-bottom:14px;
+  display:block;
+}
+.benefit-card h3{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(14px,1.8vw,16px);
+  font-weight:700;
+  margin-bottom:14px;
+  line-height:1.5;
+  color:var(--ink);
+}
+.benefit-card ul{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:7px;
+}
+.benefit-card ul li{
+  font-size:12.5px;
+  color:var(--mid);
+  line-height:1.65;
+  padding-left:14px;
+  position:relative;
+}
+.benefit-card ul li::before{
+  content:'✓';
+  position:absolute;
+  left:0;
+  color:var(--gold);
+  font-size:11px;
+}
+.benefit-note{
+  margin-top:32px;
+  text-align:center;
+  font-size:13px;
+  color:var(--mid);
+}
+.benefit-note em{
+  font-style:normal;
+  color:var(--red);
+  font-weight:700;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   CTA BLOCK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.cta-section{
+  background:var(--ink);
+  padding:96px 0;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.cta-section .bg-deco{
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(184,137,42,.04) 39px,rgba(184,137,42,.04) 40px),
+    repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(184,137,42,.04) 39px,rgba(184,137,42,.04) 40px);
+}
+.cta-section .container{position:relative;z-index:1;}
+.cta-eyebrow{
+  font-family:'Cormorant Garamond',serif;
+  font-size:12px;
+  letter-spacing:.35em;
+  color:var(--gold);
+  text-transform:uppercase;
+  display:block;
+  margin-bottom:20px;
+}
+.cta-main{
+  font-family:'Shippori Mincho',serif;
+  font-size:clamp(20px,4vw,36px);
+  color:var(--ivory);
+  line-height:1.55;
+  margin-bottom:8px;
+  font-weight:700;
+}
+.cta-main em{font-style:normal;color:var(--gold-lt);}
+.cta-sub{
+  font-size:14px;
+  color:var(--mid);
+  line-height:1.8;
+  margin-bottom:48px;
+  max-width:560px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.cta-two-col{
+  display:flex;
+  align-items:stretch;
+  gap:0;
+  max-width:680px;
+  margin:0 auto 36px;
+  border:1px solid var(--border);
+}
+.cta-col{
+  flex:1;
+  padding:36px 32px;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  background:rgba(255,255,255,.03);
+  text-align:left;
+}
+.cta-col-label{
+  font-family:'Cormorant Garamond',serif;
+  font-size:11px;
+  letter-spacing:.3em;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+.cta-col-head{
+  font-family:'Shippori Mincho',serif;
+  font-size:15px;
+  color:var(--ivory);
+  font-weight:700;
+  line-height:1.5;
+}
+.cta-col-desc{
+  font-size:12.5px;
+  color:var(--mid);
+  line-height:1.75;
+  flex:1;
+}
+.cta-col-divider{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:44px;
+  flex-shrink:0;
+  border-left:1px solid var(--border);
+  border-right:1px solid var(--border);
+  background:rgba(184,137,42,.04);
+}
+.cta-col-divider span{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;
+  color:var(--gold);
+  letter-spacing:.1em;
+  writing-mode:vertical-rl;
+}
+@media(max-width:600px){
+  .cta-two-col{flex-direction:column;}
+  .cta-col-divider{width:auto;height:44px;border:none;border-top:1px solid var(--border);border-bottom:1px solid var(--border);flex-direction:row;}
+  .cta-col-divider span{writing-mode:horizontal-tb;}
+}
+
+/* existing .cta-buttons kept for other uses */
+.cta-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  justify-content:center;
+  margin-bottom:32px;
+}
+.btn-line{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#06C755;
+  color:white;
+  font-weight:700;
+  font-size:15px;
+  padding:16px 32px;
+  border-radius:2px;
+  text-decoration:none;
+  letter-spacing:.06em;
+  transition:opacity .2s, transform .15s;
+}
+.btn-line:hover{opacity:.88;transform:translateY(-1px);}
+.cta-free-note{
+  display:inline-flex;
+  align-items:center;
+  gap:24px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.free-chip{
+  font-size:12px;
+  color:var(--mid);
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.free-chip::before{
+  content:'◆';
+  font-size:8px;
+  color:var(--gold);
+}
+.cta-bottom-note{
+  margin-top:32px;
+  font-size:12px;
+  color:rgba(110,103,96,.7);
+  line-height:1.8;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FAQ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.faq-section{
+  background:white;
+  padding:88px 0;
+}
+.faq-list{
+  display:flex;
+  flex-direction:column;
+  gap:0;
+  border:1px solid var(--cream);
+}
+.faq-item{
+  border-bottom:1px solid var(--cream);
+}
+.faq-item:last-child{border-bottom:none;}
+.faq-q{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  padding:24px 28px;
+  cursor:pointer;
+  transition:background .2s;
+}
+.faq-q:hover{background:var(--ivory);}
+.faq-q .q-mark{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;
+  color:var(--gold);
+  flex-shrink:0;
+  font-weight:700;
+  line-height:1.3;
+}
+.faq-q .q-text{
+  font-family:'Shippori Mincho',serif;
+  font-size:14.5px;
+  font-weight:600;
+  color:var(--ink);
+  line-height:1.6;
+  flex:1;
+}
+.faq-q .q-arrow{
+  font-size:12px;
+  color:var(--mid);
+  flex-shrink:0;
+  margin-top:4px;
+  transition:transform .25s;
+}
+.faq-item.open .q-arrow{transform:rotate(180deg);}
+.faq-a{
+  display:none;
+  padding:0 28px 24px 60px;
+  font-size:13.5px;
+  color:var(--mid);
+  line-height:1.85;
+  border-left:2px solid var(--gold-pale);
+  margin-left:28px;
+  margin-right:28px;
+  margin-bottom:8px;
+}
+.faq-item.open .faq-a{display:block;}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FOOTER
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+footer{
+  background:var(--ink);
+  padding:48px 0 32px;
+  text-align:center;
+  border-top:1px solid var(--border);
+}
+.footer-brand{
+  font-family:'Shippori Mincho',serif;
+  font-size:18px;
+  color:var(--gold-lt);
+  letter-spacing:.15em;
+  margin-bottom:10px;
+}
+.footer-sub{
+  font-size:12px;
+  color:var(--mid);
+  margin-bottom:24px;
+}
+.footer-links{
+  display:flex;
+  justify-content:center;
+  gap:24px;
+  margin-bottom:28px;
+  flex-wrap:wrap;
+}
+.footer-links a{
+  font-size:12px;
+  color:var(--mid);
+  text-decoration:none;
+  letter-spacing:.08em;
+  transition:color .2s;
+}
+.footer-links a:hover{color:var(--gold-lt);}
+.footer-copy{
+  font-size:11px;
+  color:rgba(110,103,96,.5);
+  letter-spacing:.08em;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   FLOATING CTA (mobile)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+.float-cta{
+  display:none;
+  position:fixed;
+  bottom:0;left:0;right:0;
+  z-index:900;
+  background:rgba(16,15,12,.96);
+  border-top:1px solid var(--border);
+  padding:12px 20px;
+  gap:10px;
+  backdrop-filter:blur(10px);
+}
+.float-cta .btn-primary{
+  flex:1;
+  justify-content:center;
+  font-size:13px;
+  padding:13px 16px;
+}
+.float-cta .btn-line{
+  flex:1;
+  justify-content:center;
+  font-size:13px;
+  padding:13px 16px;
+}
+
+/* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   RESPONSIVE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ */
+@media(max-width:700px){
+  .hero-inner{padding:0 24px;}
+  .grade-cols{grid-template-columns:1fr;}
+  .grade-col{border-right:none;border-bottom:1px solid var(--cream);}
+  .grade-col:last-child{border-bottom:none;}
+  .float-cta{display:flex;}
+  footer{padding-bottom:80px;}
+  .detail-cards{grid-template-columns:1fr 1fr;}
+  .cta-buttons{flex-direction:column;align-items:stretch;}
+  .cta-buttons a{text-align:center;justify-content:center;}
+  .sticky-nav .nav-brand{display:none;}
+}
+@media(max-width:480px){
+  .detail-cards{grid-template-columns:1fr;}
+  .benefit-cards{grid-template-columns:1fr;}
+  .pain-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════ STICKY NAV ════════════════ -->
+<nav class="sticky-nav" id="stickyNav">
+  <div class="sticky-nav-inner">
+    <span class="nav-brand">SCアカデミー｜受験セミナー</span>
+    <a href="https://forms.gle/Ep95woo9ktgywZqm8" class="nav-cta" target="_blank" rel="noopener">📋 申し込む</a>
+  </div>
+</nav>
+
+<!-- ════════════════ HERO ════════════════ -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-left-bar"></div>
+  <div class="hero-watermark">受験</div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow reveal">
+      <span class="line"></span>
+      <span>SC Academy — 2025 Seminar</span>
+    </div>
+
+    <div class="hero-kv">
+      <p class="catch reveal reveal-delay-1">
+        中学1〜3年生とその保護者の方へ ――<br>
+        <em>知らないまま受験を迎えていませんか？</em>
+      </p>
+      <h1 class="hero-title reveal reveal-delay-2">
+        知らないと損する<br>
+        <em>新潟県 高校受験</em><br>
+        セミナー
+      </h1>
+      <p class="hero-sub reveal reveal-delay-3">
+        内申点・入試制度・学年別やること ―― 会場で全部まとめて解説します。<br>
+        親子での参加も、お子様だけの参加も歓迎です。
+      </p>
+    </div>
+
+    <div class="hero-info-row reveal reveal-delay-3">
+      <div class="info-chip"><span class="dot"></span>対象：中学1〜3年生・保護者（親子参加歓迎）</div>
+      <div class="info-chip"><span class="dot"></span>会場開催（オフライン）</div>
+      <div class="info-chip"><span class="dot"></span>参加費：無料</div>
+      <div class="info-chip"><span class="dot"></span>所要時間：約90分</div>
+      <div class="info-chip"><span class="dot"></span>入塾強制なし</div>
+    </div>
+
+    <div class="hero-cta-group reveal reveal-delay-4">
+      <a href="https://forms.gle/Ep95woo9ktgywZqm8" class="btn-primary" target="_blank" rel="noopener">📋 参加を申し込む（無料）</a>
+      <a href="https://lin.ee/1St1put" class="btn-secondary" target="_blank" rel="noopener">📱 LINEで登録する</a>
+    </div>
+    <p class="hero-note reveal reveal-delay-4">※ お席に限りがあります。お早めにお申し込みください。</p>
+  </div>
+</section>
+
+<!-- ════════════════ PAIN ════════════════ -->
+<section class="pain-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Does this sound familiar?</span>
+      <h2>こんなお悩み、ありませんか？</h2>
+      <p>多くの保護者・中学生が、受験の「仕組み」を知らないまま不安を抱えています。</p>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <span class="icon">😰</span>
+        <p>子どもの成績が<strong>なかなか上がらない</strong>が、何が問題なのか分からない</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-1">
+        <span class="icon">📖</span>
+        <p><strong>内申点の仕組み</strong>をよく理解していないまま、気づいたら中3になっていた</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-2">
+        <span class="icon">🗓️</span>
+        <p>「まだ中1（中2）だから大丈夫」と思っているが、<strong>本当に大丈夫なのか</strong>が不安</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-3">
+        <span class="icon">🏫</span>
+        <p>志望校への<strong>合格に必要な学力・内申の水準</strong>がよく分かっていない</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-1">
+        <span class="icon">📊</span>
+        <p>塾に通わせているが、<strong>定期テストと入試対策がつながっている感覚</strong>がない</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-2">
+        <span class="icon">🔄</span>
+        <p>2027年度以降の<strong>入試制度変更</strong>があると聞いたが、詳しく知らない</p>
+      </div>
+    </div>
+
+    <div class="pain-bridge reveal">
+      <p>
+        これらはすべて、<em>「受験の仕組み」を正しく知ること</em>で解決できます。<br>
+        このセミナーでは、新潟県の受験に必要な知識を体系的に、分かりやすくお伝えします。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ DETAIL ════════════════ -->
+<section class="detail-section" id="detail">
+  <div class="bg-grid"></div>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Seminar Information</span>
+      <h2>セミナー詳細</h2>
+      <p>日時・会場・内容をご確認ください。</p>
+    </div>
+
+    <div class="detail-cards">
+      <div class="detail-card reveal">
+        <div class="dc-label">Date &amp; Time</div>
+        <div class="dc-main">日時</div>
+        <div class="dc-sub">※ お申し込み後にご案内します<br>平日夜・土日開催予定</div>
+      </div>
+      <div class="detail-card reveal reveal-delay-1">
+        <div class="dc-label">Venue — Offline</div>
+        <div class="dc-main">会場開催</div>
+        <div class="dc-sub">SCアカデミー 教室にて<br>（詳細はお申込み後にご案内）<br>※ オンライン配信はありません</div>
+      </div>
+      <div class="detail-card reveal reveal-delay-2">
+        <div class="dc-label">Fee</div>
+        <div class="dc-main">参加費<br>無料</div>
+        <div class="dc-sub">入塾のご案内はしますが<br>強制は一切ありません</div>
+      </div>
+      <div class="detail-card reveal reveal-delay-3">
+        <div class="dc-label">Duration</div>
+        <div class="dc-main">約90分</div>
+        <div class="dc-sub">質疑応答・個別相談の<br>時間もご用意しています</div>
+      </div>
+    </div>
+
+    <p class="agenda-title reveal">📋 セミナーで学べること</p>
+    <ul class="agenda-list">
+      <li class="reveal"><span class="num">01</span>新潟県の高校入試の全体構造（内申・学力検査の比重）</li>
+      <li class="reveal reveal-delay-1"><span class="num">02</span>内申点の計算方法と、副教科・提出物の影響</li>
+      <li class="reveal reveal-delay-2"><span class="num">03</span>特色化選抜・一般選抜の違いと戦略的な使い方</li>
+      <li class="reveal reveal-delay-3"><span class="num">04</span>英語・数学・社会・理科・国語 各教科の対策ポイント</li>
+      <li class="reveal reveal-delay-1"><span class="num">05</span>中学1・2・3年生それぞれが「今すぐやるべきこと」</li>
+      <li class="reveal reveal-delay-2"><span class="num">06</span>2027年度以降の入試制度変更への備え方</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ════════════════ GRADE ════════════════ -->
+<section class="grade-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">By Grade</span>
+      <h2>学年別 — 今すぐ動くべき理由</h2>
+      <p>「まだ早い」は危険です。学年ごとに取り組むべきことが違います。</p>
+    </div>
+
+    <div class="grade-cols reveal">
+      <div class="grade-col">
+        <div class="grade-col-head">
+          <span class="grade-tag">中学1年生</span>
+          <h3>習慣と基礎力を<br>今のうちに固める</h3>
+        </div>
+        <ul class="grade-actions">
+          <li>定期テストを軽視しない習慣を今から作る</li>
+          <li>副教科も含めて通知表を意識し始める</li>
+          <li>英語・数学の積み残しを作らない</li>
+          <li>提出物・授業態度を丁寧にこなす</li>
+        </ul>
+      </div>
+      <div class="grade-col">
+        <div class="grade-col-head">
+          <span class="grade-tag">中学2年生</span>
+          <h3>志望校を見据えて<br>戦略的に動き始める</h3>
+        </div>
+        <ul class="grade-actions">
+          <li>志望校のイメージを持ち始める</li>
+          <li>学校ワークの回し方・使い方を改善する</li>
+          <li>テスト2週間前の勉強習慣を固定する</li>
+          <li>英語・数学の苦手単元を早期に補強する</li>
+        </ul>
+      </div>
+      <div class="grade-col">
+        <div class="grade-col-head">
+          <span class="grade-tag">中学3年生</span>
+          <h3>1学期の評定が<br>合否を左右する</h3>
+        </div>
+        <ul class="grade-actions">
+          <li>1学期・前期の評定を最優先で取りにいく</li>
+          <li>夏までに英語・数学の穴を埋める</li>
+          <li>秋以降は入試形式の問題に慣れる</li>
+          <li>思考・表現問題の対策を早めに始める</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grade-bottom reveal">
+      学年が上がるほど大変になるのは事実。でも逆に言えば、<em>早く正しいやり方に変えれば、それだけ有利</em>です。<br>
+      このセミナーで「最初の一歩」を踏み出してください。
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ BENEFITS ════════════════ -->
+<section class="benefit-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">Special Gift</span>
+      <h2>参加者限定の特典</h2>
+      <p>セミナーに参加いただいた方へ、3つの特典をご用意しています。</p>
+    </div>
+
+    <div class="benefit-cards">
+      <div class="benefit-card reveal">
+        <span class="bnum">1</span>
+        <span class="bicon">📄</span>
+        <h3>新潟県高校受験<br>学習戦略シート</h3>
+        <ul>
+          <li>志望校と現在の通知表を確認するフォーマット付き</li>
+          <li>定期テストの平均点からまず上げるべき教科を整理</li>
+          <li>今月取り組む3つのアクションを書き込めるシート</li>
+        </ul>
+      </div>
+      <div class="benefit-card reveal reveal-delay-1">
+        <span class="bnum">2</span>
+        <span class="bicon">✅</span>
+        <h3>志望校別<br>学習優先順位チェックシート</h3>
+        <ul>
+          <li>志望校の内申・学力検査比率を確認できる</li>
+          <li>今の状態から何が足りないかを可視化</li>
+          <li>個別相談でさらに詳しく確認可能</li>
+        </ul>
+      </div>
+      <div class="benefit-card reveal reveal-delay-2">
+        <span class="bnum">3</span>
+        <span class="bicon">💬</span>
+        <h3>無料 個別学習診断<br>（30分）</h3>
+        <ul>
+          <li>現在の学習状況を専任スタッフが丁寧にヒアリング</li>
+          <li>学年・志望校・弱点教科に合わせた優先事項を整理</li>
+          <li>入塾の強制は一切ありません</li>
+        </ul>
+      </div>
+    </div>
+    <p class="benefit-note reveal">
+      特典①②は当日受付にてお渡し。<em>特典②のデジタル版はLINE登録でお届け</em>します。
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════ CTA ════════════════ -->
+<section class="cta-section" id="cta">
+  <div class="bg-deco"></div>
+  <div class="container">
+    <span class="cta-eyebrow reveal">Next Step — 2つの方法で申し込めます</span>
+    <h2 class="cta-main reveal">
+      「うちの子、<em>今すぐ動いた方がいいかも</em>」<br>
+      と思ったら、まずここから。
+    </h2>
+    <p class="cta-sub reveal">
+      セミナーへの参加は無料・会場開催です。<br>
+      Googleフォームかな LINEのどちらからでもお申し込みいただけます。
+    </p>
+
+    <div class="cta-two-col reveal">
+      <div class="cta-col">
+        <div class="cta-col-label">方法①</div>
+        <div class="cta-col-head">📋 Googleフォームで申し込む</div>
+        <p class="cta-col-desc">お名前・学年・ご連絡先を入力するだけ。<br>確認メールを自動でお送りします。</p>
+        <a href="https://forms.gle/Ep95woo9ktgywZqm8" class="btn-primary" target="_blank" rel="noopener" style="justify-content:center;">申込フォームへ（無料）</a>
+      </div>
+      <div class="cta-col-divider"><span>or</span></div>
+      <div class="cta-col">
+        <div class="cta-col-label">方法②</div>
+        <div class="cta-col-head">📱 LINEで登録・申し込む</div>
+        <p class="cta-col-desc">友だち追加後にメッセージを送るだけ。<br>特典シートのデジタル版もLINEでお届けします。</p>
+        <a href="https://lin.ee/1St1put" class="btn-line" target="_blank" rel="noopener" style="justify-content:center;">LINE公式を友だち追加</a>
+      </div>
+    </div>
+
+    <div class="cta-free-note reveal">
+      <span class="free-chip">参加費 無料</span>
+      <span class="free-chip">会場開催（オフライン）</span>
+      <span class="free-chip">入塾強制なし</span>
+      <span class="free-chip">特典3つ</span>
+    </div>
+    <p class="cta-bottom-note reveal">
+      お席に限りがあります。お早めにお申し込みください。<br>
+      ご不明な点はLINEよりお気軽にお問い合わせください。
+    </p>
+  </div>
+</section>
+
+<!-- ════════════════ FAQ ════════════════ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-label">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="q-mark">Q</span>
+          <span class="q-text">子どもは参加できますか？</span>
+          <span class="q-arrow">▼</span>
+        </div>
+        <div class="faq-a">主に保護者の方向けの内容ですが、お子様と一緒にご参加いただいても構いません。セミナー後の個別相談は、お子様同席でも歓迎しています。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="q-mark">Q</span>
+          <span class="q-text">中学1年生でも参加していいですか？</span>
+          <span class="q-arrow">▼</span>
+        </div>
+        <div class="faq-a">もちろんです。むしろ早い時期からの参加をお勧めしています。受験の仕組みを早く知るほど、対策できる期間が長くなります。セミナーでは学年別のアクションもお伝えします。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="q-mark">Q</span>
+          <span class="q-text">入塾を勧められますか？</span>
+          <span class="q-arrow">▼</span>
+        </div>
+        <div class="faq-a">SCアカデミーのご紹介はしますが、入塾を強制することは一切ありません。まずは情報を知ることを目的にお越しください。相談の場としてもご活用いただけます。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="q-mark">Q</span>
+          <span class="q-text">オンライン参加はできますか？</span>
+          <span class="q-arrow">▼</span>
+        </div>
+        <div class="faq-a">本セミナーは会場（オフライン）での開催です。オンライン配信は行っていませんが、次回開催のご案内やセミナー内容の一部共有をLINEでお届けする場合があります。遠方の方はLINEよりご相談ください。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span class="q-mark">Q</span>
+          <span class="q-text">申し込み後にキャンセルできますか？</span>
+          <span class="q-arrow">▼</span>
+        </div>
+        <div class="faq-a">はい、当日のキャンセルも承ります。ご都合が変わった場合はLINEまたはメールでご連絡ください。次回開催日のご案内もいたします。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════ FOOTER ════════════════ -->
+<footer>
+  <div class="footer-brand">SC ACADEMY</div>
+  <div class="footer-sub">新潟県 高校受験 学習塾</div>
+  <div class="footer-links">
+    <a href="#">プライバシーポリシー</a>
+    <a href="#">お問い合わせ</a>
+    <a href="https://forms.gle/Ep95woo9ktgywZqm8" target="_blank" rel="noopener">セミナー申し込み</a>
+  </div>
+  <div class="footer-copy">© 2025 SC Academy. All rights reserved.</div>
+</footer>
+
+<!-- FLOATING CTA (mobile) -->
+<div class="float-cta">
+  <a href="https://forms.gle/Ep95woo9ktgywZqm8" class="btn-primary" target="_blank" rel="noopener">📋 フォームで申し込む</a>
+  <a href="https://lin.ee/1St1put" class="btn-line" target="_blank" rel="noopener">📱 LINEで申し込む</a>
+</div>
+
+<script>
+/* ── Scroll Reveal ── */
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+/* ── Sticky Nav hide on scroll up ── */
+let lastY = 0;
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('stickyNav');
+  const y = window.scrollY;
+  if (y < lastY || y < 80) {
+    nav.style.transform = 'translateY(0)';
+  } else {
+    nav.style.transform = 'translateY(-100%)';
+  }
+  lastY = y;
+});
+
+/* ── FAQ toggle ── */
+function toggleFaq(el) {
+  const item = el.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+</script>
+</body>
+</html>
